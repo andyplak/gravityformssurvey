@@ -25,11 +25,12 @@ class GF_Field_Likert extends GF_Field {
 	 * @return array
 	 */
 	function get_form_editor_field_settings() {
-		return array(
+		$settings = array(
 			'gsurvey-likert-setting-enable-multiple-rows',
 			'gsurvey-likert-setting-columns',
 			'rules_setting',
 		);
+		return apply_filters('gform_gfield_survery_likert_editor_field_settings', $settings);
 	}
 
 	/**
